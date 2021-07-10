@@ -1,6 +1,6 @@
 {
-    "name":"codeception/module-amqp",
-    "description":"AMQP module for Codeception",
+    "name":"ezyt/monolog-db",
+    "description":"Package contents DB handler for monolog and commands for servicing tables",
     "keywords":["symfony", "monolog", "db", "database"],
     "type":"library",
     "license":"MIT",
