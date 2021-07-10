@@ -1,0 +1,29 @@
+{
+    "name":"codeception/module-amqp",
+    "description":"AMQP module for Codeception",
+    "keywords":["symfony", "monolog", "db", "database"],
+    "type":"library",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Denis Putilin"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.3.0 <9.0",
+        "monolog/monolog": "^2.3",
+        "ramsey/uuid-doctrine": "^1.0",
+        "doctrine/orm": "^2.5",
+        "symfony/console": "^4.0|^5.0|^6.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ezyt\\MonologBD\\": "src/",
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "classmap-authoritative": true
+    }
+}
