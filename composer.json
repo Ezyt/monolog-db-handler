@@ -1,12 +1,13 @@
 {
-    "name":"ezyt/monolog-db",
+    "name":"ezyt/monolog-db-handler",
     "description":"Package contents DB handler for monolog and commands for servicing tables",
     "keywords":["symfony", "monolog", "db", "database"],
     "type":"library",
     "license":"MIT",
     "authors":[
         {
-            "name":"Denis Putilin"
+            "name":"Denis Putilin",
+            "email": "ezyt.job@gmail.com"
         }
     ],
     "minimum-stability": "stable",
@@ -22,8 +23,5 @@
             "Ezyt\\MonologBD\\": "src/",
             "App\\Tests\\": "tests/"
         }
-    },
-    "config": {
-        "classmap-authoritative": true
     }
 }
