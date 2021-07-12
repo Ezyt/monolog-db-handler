@@ -14,16 +14,13 @@ use Throwable;
 class InitCommand extends Command
 {
     public const COMMAND_NAME = 'app:init:log';
-
-    protected static $defaultName = self::COMMAND_NAME;
+    public const SUCCESS      = 0;
 
     protected $initializer;
 
-    public function __construct(
-        InitializerInterface $initializer,
-        string $name = null
-    ) {
-        parent::__construct($name);
+    public function __construct(InitializerInterface $initializer)
+    {
+        parent::__construct(self::COMMAND_NAME);
         $this->initializer = $initializer;
     }
 

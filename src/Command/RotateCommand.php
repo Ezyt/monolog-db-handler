@@ -16,19 +16,16 @@ use Throwable;
 class RotateCommand extends Command
 {
     public const COMMAND_NAME = 'app:log:rotate';
-
-    protected static $defaultName = self::COMMAND_NAME;
+    public const SUCCESS      = 0;
 
     protected const HISTORY_SIZE_KEY     = 'history_size';
     protected const DEFAULT_HISTORY_SIZE = '2';
 
     protected $rotator;
 
-    public function __construct(
-        RotatorInterface $rotator,
-        string $name = null
-    ) {
-        parent::__construct($name);
+    public function __construct(RotatorInterface $rotator)
+    {
+        parent::__construct(self::COMMAND_NAME);
         $this->rotator = $rotator;
     }
 
