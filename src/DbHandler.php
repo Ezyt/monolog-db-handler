@@ -33,7 +33,7 @@ class DbHandler extends AbstractProcessingHandler
         bool $extendContext = true,
         bool $categoryRequire = true
     ) {
-        parent::__construct(Logger::INFO);
+        parent::__construct();
         $this->query = $connection->prepare(
             'INSERT INTO ' . $tableName
             . ' (level, category, message, context) VALUES (:level, :category, :message, :context)'
@@ -116,6 +116,6 @@ class DbHandler extends AbstractProcessingHandler
     public function isHandling(array $record): bool
     {
         return parent::isHandling($record)
-            && (!$this->categoryRequire || $record['context']['category']);
+            && (!$this->categoryRequire || isset($record['context']['category']));
     }
 }
